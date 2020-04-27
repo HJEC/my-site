@@ -1,1 +1,1 @@
-body{font-size:20px;background-color:#ffdab9}p{color:orange;font-weight:bold;font-size:20px}h1{font-size:100px;color:#009a00;font-family:"Roboto"}
+*{margin:0;box-sizing:border-box;font-size:10px}header{background-color:orange}p{font-weight:bold}h1{font-size:10rem;color:orange;font-family:"Century Gothic",sans-serif;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff}
