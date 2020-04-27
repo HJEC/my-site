@@ -1,0 +1,29 @@
+{
+  "name": "my-site",
+  "version": "1.0.0",
+  "description": "personal-portfolio-site",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HJEC/my-site.git"
+  },
+  "keywords": [
+    "HJEC",
+    "portfolio",
+    "web-development"
+  ],
+  "author": "Henry J. E. Crookes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HJEC/my-site/issues"
+  },
+  "homepage": "https://github.com/HJEC/my-site#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglifycss": "^1.1.0"
+  }
+}

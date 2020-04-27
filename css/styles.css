@@ -1,0 +1,13 @@
+body {
+  font-size: 20px;
+  background-color: #ffdab9; }
+
+p {
+  color: orange;
+  font-weight: bold;
+  font-size: 20px; }
+
+h1 {
+  font-size: 100px;
+  color: #009a00;
+  font-family: "Roboto"; }
