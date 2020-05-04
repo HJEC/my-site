@@ -2,6 +2,10 @@
   width: 80%;
   position: relative; }
 
+#svg-master {
+  width: 500px;
+  height: 500px; }
+
 #palm {
   transform: translateX(50px); }
 
