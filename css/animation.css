@@ -1,14 +1,7 @@
-.intro-guy {
-  width: 80%;
-  position: relative; }
+.intro-dude {
+  position: relative;
+  margin: auto; }
 
 #svg-master {
-  width: 500px;
-  height: 500px; }
-
-#palm {
-  transform: translateX(50px); }
-
-#b-note {
-  fill: #000;
-  transform: translateX(100px); }
+  max-width: 80vw;
+  max-height: 50vh; }
