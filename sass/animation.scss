@@ -10,16 +10,13 @@
 
 // STAR-TWINKLES
 #twinkle {
-  transform-origin: center;
-  animation: twinkle 2s infinite;
 }
 #star1 {
   animation-delay: 0s;
-  animation: twinkle 2s infinite;
+  animation: twinkle 4s infinite;
 }
 #star2 {
-  animation-delay: 0.5s;
-  animation: twinkle 3.5s infinite;
+  animation: twinkle 3s infinite;
 }
 #star3 {
   animation-delay: 1s;
@@ -27,21 +24,32 @@
 }
 @keyframes twinkle {
   50% {
-    transform: scale(-0.1);
+    transform: scale(1.01);
     opacity: 0;
   }
 }
 
 // LEAF-SWAY
 
-#leaf-yellow {
-  animation: leaf-sway 2s infinite;
-  transform-origin: bottom right;
+#leaf-yellow,
+#leaf-blue {
+  animation: leaf-sway-yellow-blue 4.5s infinite;
+  transform-origin: 50% 50%;
 }
 
-@keyframes leaf-sway {
+#leaf-green {
+  animation: leaf-sway-green 5s infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes leaf-sway-yellow-blue {
   50% {
-    transform: rotate(2deg);
+    transform: translateX(-5px) translateY(40px) rotate(-3deg);
+  }
+}
+@keyframes leaf-sway-green {
+  50% {
+    transform: translateX(10px) translateY(-45px) rotate(3deg);
   }
 }
 
