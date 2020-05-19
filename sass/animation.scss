@@ -1,3 +1,8 @@
+%rotate-transform {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+
 .intro-dude {
   position: relative;
   margin: auto;
@@ -8,7 +13,7 @@
   max-height: 100vh;
 }
 
-// GUY ANIMATIONS
+// CHARACTER ANIMATIONS
 // HEAD SWAY
 #guy-head {
   animation: head-nod 5s ease-in-out infinite;
@@ -78,16 +83,60 @@
 
 #palm {
   animation: palm 3s infinite;
-  transform-origin: 50% 50%;
+  transform: translateX(5px);
+  transform-origin: left;
+  transform-box: fill-box;
 }
 @keyframes palm {
   10%,
   50% {
-    transform: rotate(7deg) translate(-30px, 10px);
+    transform: rotate(6deg);
   }
   20%,
   60% {
-    transform: rotate(2deg) translate(-10px, 0px);
+    transform: rotate(3deg);
+  }
+}
+
+// RIGHT ARM
+#right-bicep,
+#shoulder {
+  animation: bicep-shoulder-move 8s infinite alternate;
+  transform-origin: top left;
+  transform-box: fill-box;
+}
+@keyframes bicep-shoulder-move {
+  20% {
+    transform: rotate(-2deg) translate(5px, 5px);
+  }
+  40% {
+    transform: rotate(1deg);
+  }
+  60% {
+    transform: rotate(-1deg);
+  }
+  80% {
+    transform: rotate(2deg);
+  }
+}
+#right-forearm {
+  animation: right-arm 8s infinite alternate;
+  transform-origin: left;
+  transform-box: fill-box;
+}
+
+@keyframes right-arm {
+  20% {
+    transform: rotate(-6deg) translateX(15px);
+  }
+  40% {
+    transform: rotate(1deg);
+  }
+  60% {
+    transform: rotate(-3deg) translateX(5px);
+  }
+  80% {
+    transform: rotate(3deg) translateX(-5px);
   }
 }
 
@@ -102,7 +151,7 @@
     transform: rotate(-2deg) translate(0px, 0px);
   }
   40% {
-    transform: rotate(1deg) translate(-15px, 5px);
+    transform: rotate(1deg) translate(-5px, 0px);
   }
   60% {
     transform: rotate(-5deg) translate(30px, 5px);
@@ -152,7 +201,45 @@
   }
 }
 
+// WHEELS
+#left-wheel,
+#right-wheel {
+  animation: skate-wheel-rotate 10s infinite;
+  @extend %rotate-transform;
+}
+@keyframes skate-wheel-rotate {
+  0% {
+    transform: rotate(30deg);
+  }
+  20% {
+    transform: rotate(-25deg);
+  }
+  40% {
+    transform: rotate(160deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
 // ACCESSORY ANIMATIONS
+
+// LAPTOP
+#Laptop {
+  animation: laptop 3s infinite;
+  @extend %rotate-transform;
+}
+@keyframes laptop {
+  50% {
+    transform: rotate(2deg) translate(-2px, 5px);
+  }
+}
 // MUSIC NOTES
 #o-note {
   animation: o-note-bounce 4s ease-in-out infinite;
@@ -194,6 +281,7 @@
     opacity: 0.2;
   }
 }
+
 // STARS
 @for $i from 1 through 3 {
   $num: $i * 2.5;
@@ -224,7 +312,7 @@
 
 @keyframes leaf-sway-yellow-blue {
   50% {
-    transform: translateX(-20px) translateY(55px) rotate(-4deg);
+    transform: translateX(-25px) translateY(55px) rotate(-4deg);
   }
 }
 @keyframes leaf-sway-green {

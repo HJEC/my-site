@@ -1,3 +1,8 @@
+#left-wheel,
+#right-wheel, #Laptop {
+  transform-origin: 50% 50%;
+  transform-box: fill-box; }
+
 .intro-dude {
   position: relative;
   margin: auto; }
@@ -57,15 +62,48 @@
 
 #palm {
   animation: palm 3s infinite;
-  transform-origin: 50% 50%; }
+  transform: translateX(5px);
+  transform-origin: left;
+  transform-box: fill-box; }
 
 @keyframes palm {
   10%,
   50% {
-    transform: rotate(7deg) translate(-30px, 10px); }
+    transform: rotate(6deg); }
   20%,
   60% {
-    transform: rotate(2deg) translate(-10px, 0px); } }
+    transform: rotate(3deg); } }
+
+#right-bicep,
+#shoulder {
+  animation: bicep-shoulder-move 8s infinite alternate;
+  transform-origin: top left;
+  transform-box: fill-box; }
+
+@keyframes bicep-shoulder-move {
+  20% {
+    transform: rotate(-2deg) translate(5px, 5px); }
+  40% {
+    transform: rotate(1deg); }
+  60% {
+    transform: rotate(-1deg); }
+  80% {
+    transform: rotate(2deg); } }
+
+#right-forearm {
+  animation: right-arm 8s infinite alternate;
+  transform-origin: left;
+  transform-box: fill-box; }
+
+@keyframes right-arm {
+  20% {
+    transform: rotate(-6deg) translateX(15px); }
+  40% {
+    transform: rotate(1deg); }
+  60% {
+    transform: rotate(-3deg) translateX(5px); }
+  80% {
+    transform: rotate(3deg) translateX(-5px); } }
 
 #right-thigh {
   transform-origin: 50% 50%;
@@ -75,7 +113,7 @@
   20% {
     transform: rotate(-2deg) translate(0px, 0px); }
   40% {
-    transform: rotate(1deg) translate(-15px, 5px); }
+    transform: rotate(1deg) translate(-5px, 0px); }
   60% {
     transform: rotate(-5deg) translate(30px, 5px); }
   80% {
@@ -109,6 +147,31 @@
     transform: translateX(50px); }
   100% {
     transform: translateX(0px); } }
+
+#left-wheel,
+#right-wheel {
+  animation: skate-wheel-rotate 10s infinite; }
+
+@keyframes skate-wheel-rotate {
+  0% {
+    transform: rotate(30deg); }
+  20% {
+    transform: rotate(-25deg); }
+  40% {
+    transform: rotate(160deg); }
+  60% {
+    transform: rotate(10deg); }
+  80% {
+    transform: rotate(90deg); }
+  100% {
+    transform: rotate(30deg); } }
+
+#Laptop {
+  animation: laptop 3s infinite; }
+
+@keyframes laptop {
+  50% {
+    transform: rotate(2deg) translate(-2px, 5px); } }
 
 #o-note {
   animation: o-note-bounce 4s ease-in-out infinite;
@@ -171,7 +234,7 @@
 
 @keyframes leaf-sway-yellow-blue {
   50% {
-    transform: translateX(-20px) translateY(55px) rotate(-4deg); } }
+    transform: translateX(-25px) translateY(55px) rotate(-4deg); } }
 
 @keyframes leaf-sway-green {
   50% {
