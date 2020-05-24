@@ -3,14 +3,6 @@
   transform-origin: 50% 50%;
   transform-box: fill-box; }
 
-.intro-dude {
-  position: relative;
-  margin: auto; }
-
-#svg-master {
-  max-width: 80vw;
-  max-height: 100vh; }
-
 #guy-head {
   animation: head-nod 5s ease-in-out infinite;
   transform-origin: center left; }
