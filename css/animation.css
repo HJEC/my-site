@@ -18,12 +18,12 @@
 @keyframes head-nod {
   0%,
   100% {
-    transform: rotate(2deg) translateX(-20px) translateY(-20px); }
+    transform: rotate(2deg) translate(-20px, -20px); }
   25%,
   75% {
-    transform: rotate(10deg) translateX(-90px) translateY(-100px); }
+    transform: rotate(10deg) translate(-90px, -100px); }
   50% {
-    transform: rotate(6deg) translateX(-50px) translateY(-60px); } }
+    transform: rotate(6deg) translate(-50px, -60px); } }
 
 #left-shoe {
   animation: left-shoe 6s infinite;
@@ -220,7 +220,7 @@
 
 @keyframes twinkle {
   50% {
-    transform: scale(1.1) translateX(-175px) translateY(-75px);
+    transform: scale(1.1) translate(-175px, -75px);
     opacity: 0; } }
 
 #leaf-yellow,
@@ -234,29 +234,29 @@
 
 @keyframes leaf-sway-yellow-blue {
   50% {
-    transform: translateX(-25px) translateY(55px) rotate(-4deg); } }
+    transform: translate(-25px, 55px) rotate(-4deg); } }
 
 @keyframes leaf-sway-green {
   50% {
-    transform: translateX(10px) translateY(-150px) rotate(10deg); } }
+    transform: translateX(10px, -150px) rotate(10deg); } }
 
 #steam-1 {
   opacity: 0;
   transform: translateY(-50px);
   animation: steam-whisp 6s ease-in-out infinite;
-  animation-delay: 2s; }
+  animation-delay: 1.5s; }
 
 #steam-2 {
   opacity: 0;
   transform: translateY(-50px);
   animation: steam-whisp 6s ease-in-out infinite;
-  animation-delay: 4s; }
+  animation-delay: 3s; }
 
 #steam-3 {
   opacity: 0;
   transform: translateY(-50px);
   animation: steam-whisp 6s ease-in-out infinite;
-  animation-delay: 6s; }
+  animation-delay: 4.5s; }
 
 @keyframes steam-whisp {
   50% {
@@ -299,7 +299,7 @@
   50% {
     opacity: 0.7; }
   75% {
-    transform: translateY(-75px) translateX(-50px);
+    transform: translate(-50px, -75px);
     opacity: 0; } }
 
 @keyframes snore-bubble {
@@ -311,4 +311,4 @@
 
 @keyframes tail-wag {
   50% {
-    transform: rotate(10deg) translateX(350px) translateY(-60px); } }
+    transform: rotate(10deg) translate(350px, -60px); } }
