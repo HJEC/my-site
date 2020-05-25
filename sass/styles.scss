@@ -5,6 +5,9 @@ $century: "Century Gothic", sans-serif;
 $text-shadow: -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange,
   1px 1px 0 orange;
 
+// FONTS
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
 %flex-center-column {
   display: flex;
   flex-direction: column;
@@ -17,7 +20,7 @@ $text-shadow: -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange,
   margin: 0;
   box-sizing: border-box;
   font-size: 10px;
-  font-family: $century;
+  font-family: "montserrat", sans-serif;
   text-align: center;
 }
 
@@ -27,18 +30,17 @@ body {
 }
 
 // HEADER //
-header {
+.intro {
   min-width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 10%;
   overflow: hidden;
+  height: 100vh;
 }
-.header-name {
+#title-name {
   white-space: nowrap;
+  margin: 10%;
   span {
     font-size: 3rem;
-    cursor: pointer;
+    cursor: crosshair;
     color: $off-white;
     font-family: $century;
     letter-spacing: 0.09rem;
@@ -52,13 +54,13 @@ header {
 
 // INTRO SECTION
 .intro-dude {
-  position: relative;
-  margin: auto;
+  margin: 5%;
 }
 #svg-master {
-  max-width: 90vw;
+  max-width: 100vw;
   height: auto;
 }
+
 .fa-chevron-down {
   margin: 10%;
   font-size: 3rem;
@@ -74,6 +76,8 @@ header {
   }
 }
 
+// ABOUT SECTION
+
 section {
   width: 80%;
   @extend %flex-center-column;
@@ -85,6 +89,10 @@ h2 {
 }
 
 p {
-  width: 75%;
+  width: 80%;
+}
+
+.about-text {
   text-align: left;
+  line-height: 1.2rem;
 }

@@ -1,6 +1,6 @@
 window.onload = function() {
   // Seperate the header letters into individual spans. (cleaner markup)
-  var target = $("#target");
+  var target = $("#title-name");
   target.html(
     target.text().replace(/./g, `<span class="hover-letter">$&</span>`)
   );
