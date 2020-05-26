@@ -83,6 +83,7 @@ $text-shadow: -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange,
 
   .about-text {
     text-align: justify;
+    margin: 10px;
   }
 
   section {
@@ -104,9 +105,6 @@ $text-shadow: -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange,
   }
 }
 
-p {
-  margin: 10px;
-}
 a {
   color: $main-orange;
   cursor: pointer;
@@ -122,6 +120,7 @@ a {
   display: grid;
   grid-template:
     "front front back back"
+    "tools tools tools tools"
     "design design design design";
   //
   grid-gap: 3px;
@@ -138,6 +137,7 @@ a {
   p {
     text-align: left;
     font-size: 1rem;
+    margin: 5px;
   }
 }
 
@@ -146,6 +146,9 @@ a {
 }
 .back-end-tools {
   grid-area: back;
+}
+.system-tools {
+  grid-area: tools;
 }
 .design-tools {
   grid-area: design;
