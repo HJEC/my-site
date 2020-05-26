@@ -20,7 +20,7 @@
     height: 100vh; }
   * #title-name {
     white-space: nowrap;
-    margin: 10%; }
+    margin: 10% auto 5% auto; }
     * #title-name span {
       font-size: 3rem;
       cursor: crosshair;
@@ -31,6 +31,11 @@
       transition: 0.5s ease-in; }
       * #title-name span:hover {
         color: orange; }
+  * .fab {
+    color: rgba(255, 165, 0, 0.7);
+    font-size: 2rem;
+    margin: auto 5px;
+    cursor: pointer; }
   * .intro-dude {
     margin: 5%; }
   * #svg-master {
@@ -84,7 +89,7 @@ a {
     padding: 10px; }
   .tools-grid p {
     text-align: left;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 5px; }
 
 .front-end-tools {
