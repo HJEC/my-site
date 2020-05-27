@@ -5,10 +5,20 @@ window.onload = function() {
     target.text().replace(/./g, `<span class="hover-letter">$&</span>`)
   );
 
-  $("img", ".project-wrapper").hover(() => {
-    $(".demo-jpg").toggle();
-    $(".demo-gif").toggle();
-  });
+  $(".project-wrapper").hover(
+    function() {
+      $(".demo-jpg").toggle();
+      $(".demo-gif").toggle();
+      $(this)
+        .find(".project-text")
+        .css({ visibility: "visible" });
+    },
+    function() {
+      $(this)
+        .find(".project-text")
+        .css({ visibility: "hidden" });
+    }
+  );
 
   fetch("https://ranmoji.herokuapp.com/emojis/api/v.1.0/")
     .then(response => response.json())

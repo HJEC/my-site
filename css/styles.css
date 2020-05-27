@@ -114,10 +114,18 @@ img {
 
 .project-wrapper {
   position: relative;
-  width: 110%; }
+  width: 110%;
+  height: auto;
+  overflow: hidden;
+  margin: 10px; }
+  .project-wrapper:hover {
+    box-shadow: 10px 10px 15px -10px rgba(0, 0, 0, 0.35), -10px 10px 15px -10px rgba(0, 0, 0, 0.35), 0px 10px 15px -10px rgba(0, 0, 0, 0.35); }
 
 .demo-gif {
   display: none; }
+
+.default-hide {
+  visibility: hidden; }
 
 .project-text {
   position: absolute;
@@ -128,8 +136,10 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0, 90, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px; }
+  .project-text em {
+    font-weight: 600; }
   .project-text p {
     position: relative;
     left: 10%;
@@ -144,8 +154,13 @@ img {
   .project-links a {
     display: inline;
     font-size: 1.2rem;
-    border-left: 3px solid orange;
-    border-bottom: 3px solid orange;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-left: 2px solid orange;
+    border-bottom: 2px solid orange;
     border-radius: 2px;
-    padding: 10px;
+    padding: 5px;
     margin: 20px 15px 10px; }
+
+.text-slide {
+  opacity: 0.1;
+  animation: text-slide 0.8s ease-in; }
