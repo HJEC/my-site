@@ -5,6 +5,11 @@ window.onload = function() {
     target.text().replace(/./g, `<span class="hover-letter">$&</span>`)
   );
 
+  $("img", ".project-wrapper").hover(() => {
+    $(".demo-jpg").toggle();
+    $(".demo-gif").toggle();
+  });
+
   fetch("https://ranmoji.herokuapp.com/emojis/api/v.1.0/")
     .then(response => response.json())
     .then(data => {
