@@ -11,12 +11,12 @@ window.onload = function() {
       $(".demo-gif").toggle();
       $(this)
         .find(".project-text")
-        .css({ visibility: "visible" });
+        .addClass("text-slide");
     },
     function() {
       $(this)
         .find(".project-text")
-        .css({ visibility: "hidden" });
+        .removeClass("text-slide");
     }
   );
 

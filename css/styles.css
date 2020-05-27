@@ -162,5 +162,11 @@ img {
     margin: 20px 15px 10px; }
 
 .text-slide {
-  opacity: 0.1;
-  animation: text-slide 0.8s ease-in; }
+  visibility: visible;
+  opacity: 0.5;
+  animation: text-slide 0.8s ease-in linear; }
+
+@keyframes slide {
+  100% {
+    transform: translateY(10px);
+    opacity: 1; } }
