@@ -64,13 +64,27 @@ section {
     transform: translate(0px, 10px);
     opacity: 1; } }
 
-.active,
-.accordion:hover {
-  background-color: #dfa700; }
+.accordion {
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease; }
+  .accordion:after {
+    content: "\02795";
+    font-size: 1rem;
+    color: #000;
+    position: relative;
+    bottom: 5px;
+    left: 10px; }
+  .accordion:hover {
+    transform: scale(1.1) translate(5px, 5px);
+    color: orange; }
+
+.active {
+  color: orange; }
+  .active:after {
+    content: "\2796"; }
 
 .about-text {
   text-align: justify;
-  margin: 10px;
   height: 0px;
   overflow: hidden;
   transition: height 0.5s ease-out; }
@@ -94,6 +108,11 @@ a {
     color: #005aff; }
 
 .tools-grid {
+  height: 0px;
+  transition: height 0.5s ease-out;
+  overflow: hidden; }
+
+.grid-border {
   display: grid;
   grid-template: "front front back back" "tools tools tools tools" "design design design design";
   grid-gap: 3px;
@@ -101,11 +120,11 @@ a {
   border-radius: 3px;
   background-color: orange;
   width: 100%; }
-  .tools-grid div {
+  .grid-border div {
     background-color: #f9f9f9;
     color: orange;
     padding: 10px; }
-  .tools-grid p {
+  .grid-border p {
     text-align: left;
     font-size: 1.2rem;
     margin: 5px;
