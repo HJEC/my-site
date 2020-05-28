@@ -1,10 +1,15 @@
 window.onload = function() {
   // Seperate the header letters into individual spans. (cleaner markup)
-  var target = $("#title-name");
+  let target = $("#title-name");
   target.html(
     target.text().replace(/./g, `<span class="hover-letter">$&</span>`)
   );
 
+  // Scripting the accordion slide for about section
+  $(".accordion").click(function() {
+    $(this).toggleClass("active");
+    console.log("next sibling", $(this).next());
+  });
   /* Swap out the static images for gifs for the project tiles */
   $(".project-wrapper").hover(function() {
     $(this)

@@ -31,6 +31,10 @@ $text-shadow: -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange,
     @extend %flex-center-column;
   }
 
+  section {
+    width: 80%;
+    @extend %flex-center-column;
+  }
   // HEADER //
 
   .intro {
@@ -93,10 +97,6 @@ $text-shadow: -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange,
     margin: 10px;
   }
 
-  section {
-    width: 80%;
-    @extend %flex-center-column;
-  }
 
   h2 {
     font-size: 3rem;
@@ -121,6 +121,9 @@ a {
   }
 }
 
+.active, .accordion:hover {
+  background-color: #000;
+}
 // TOOLS SECTION
 
 .tools-grid {
