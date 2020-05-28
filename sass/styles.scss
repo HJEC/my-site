@@ -92,11 +92,18 @@ $text-shadow: -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange,
 
   // ABOUT SECTION
 
+  // .active,
+  // .accordion:hover {
+  //   background-color: rgb(223, 167, 0);
+  // }
+
   .about-text {
     text-align: justify;
     margin: 10px;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.5s ease-out;
   }
-
 
   h2 {
     font-size: 3rem;
@@ -121,9 +128,6 @@ a {
   }
 }
 
-.active, .accordion:hover {
-  background-color: #000;
-}
 // TOOLS SECTION
 
 .tools-grid {
@@ -203,29 +207,28 @@ img {
   justify-content: center;
   background-color: transparentize(#000, 0.5);
   border-radius: 5px;
-    em {
-      font-weight: 600;
-    }
-    p {
-      position: relative;
-      left: 10%;
-      width: 75%;
-      text-align: left;
-      color: #fff;
-      font-size: 1.2rem;
-    }
-    opacity: 0;
-    transition: opacity 0.8s ease, transform 0.5s ease;
-    &:hover {
-      opacity: 1;
-      transform: translateY(10px);
+  em {
+    font-weight: 600;
   }
+  p {
+    position: relative;
+    left: 10%;
+    width: 75%;
+    text-align: left;
+    color: #fff;
+    font-size: 1.2rem;
   }
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.5s ease;
+  &:hover {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
 
-  .project-links {
-    display: flex;
-    justify-content: center;
-  }
+.project-links {
+  display: flex;
+  justify-content: center;
   a {
     display: inline;
     font-size: 1.2rem;

@@ -8,8 +8,15 @@ window.onload = function() {
   // Scripting the accordion slide for about section
   $(".accordion").click(function() {
     $(this).toggleClass("active");
-    console.log("next sibling", $(this).next());
+    let p = $(this).next();
+    console.log(p);
+    if (p.css("height") != "0px") {
+      p.css({ height: "0px" });
+    } else {
+      p.css({ height: p[0].scrollHeight + "px" });
+    }
   });
+
   /* Swap out the static images for gifs for the project tiles */
   $(".project-wrapper").hover(function() {
     $(this)
