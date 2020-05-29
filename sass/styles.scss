@@ -265,6 +265,7 @@ img {
   display: flex;
   justify-content: center;
   a {
+    pointer-events: none;
     display: inline;
     font-size: 1.2rem;
     background-color: transparentize(#000, 0.2);

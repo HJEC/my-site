@@ -38,6 +38,9 @@ window.onload = function() {
     $(this)
       .find(".demo-gif")
       .toggle();
+    $(this)
+      .find("a")
+      .css("pointer-events", "auto");
   });
 
   fetch("https://ranmoji.herokuapp.com/emojis/api/v.1.0/")
