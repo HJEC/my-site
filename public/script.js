@@ -5,6 +5,17 @@ window.onload = function() {
     target.text().replace(/./g, `<span class="hover-letter">$&</span>`)
   );
 
+  // Parallax fade out the intro section on scrollHeight
+  $(window).scroll(function() {
+    console.log("height", $(".intro").height());
+    if ($(this).scrollTop() > 0) {
+      $(".intro").css({
+        opacity: 1 - ($(window).scrollTop() / $(".intro").height()) * 1.5
+      });
+    } else {
+      $(".intro").css({ opacity: "1" });
+    }
+  });
   // Scripting the accordion slide for about section
   $(".accordion").click(function() {
     $(this).toggleClass("active");

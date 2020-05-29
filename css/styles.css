@@ -9,7 +9,8 @@ body, section {
   box-sizing: border-box;
   font-size: 10px;
   font-family: "montserrat", sans-serif;
-  text-align: center; }
+  text-align: center;
+  z-index: 1; }
   *::selection {
     background-color: rgba(255, 165, 0, 0.7); }
 
@@ -19,10 +20,15 @@ body {
 section {
   width: 80%; }
 
+.intro-wrapper {
+  height: 100vh;
+  width: 100%; }
+
 .intro {
-  min-width: 100%;
-  overflow: hidden;
-  height: 100vh; }
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0; }
 
 #title-name {
   white-space: nowrap;
@@ -34,15 +40,20 @@ section {
     font-family: "Century Gothic", sans-serif;
     letter-spacing: 0.09rem;
     -webkit-text-stroke: 1px orange;
-    transition: 0.5s ease-in; }
+    transition: 0.3s ease-in; }
     #title-name span:hover {
       color: orange; }
 
 .fab {
   color: rgba(255, 165, 0, 0.7);
   font-size: 2rem;
-  margin: auto 5px;
-  cursor: pointer; }
+  margin: auto 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease; }
+  .fab:hover {
+    transform: scale(1.1) translate(0px, 3px);
+    border-bottom: 2px solid orange;
+    padding-bottom: 5px; }
 
 .intro-dude {
   margin: 5%; }
