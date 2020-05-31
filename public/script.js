@@ -32,12 +32,9 @@ window.onload = function() {
   $(".accordion").click(function() {
     $(this).toggleClass("active");
     let p = $(this).next();
-    console.log(p);
     if (p.css("height") != "0px") {
-      console.log("this");
       p.css({ height: "0px" });
     } else {
-      console.log("scrollheight is:", p[0].scrollHeight);
       p.css({ height: p[0].scrollHeight + "px" });
     }
   });
