@@ -9,9 +9,9 @@ window.onload = function() {
 
   function parallaxFade() {
     $(window).scroll(function() {
+      // Checking width after scroll prevents function from running inbetween screen resizing
       if ($(window).width() <= 770) {
         if ($(this).scrollTop() > 0) {
-          console.log("three");
           $(".intro").css({
             opacity: 1 - ($(window).scrollTop() / $(".intro").height()) * 1.5,
             position: "fixed"
@@ -20,7 +20,6 @@ window.onload = function() {
           $(".intro").css({ opacity: "1", position: "fixed" });
         }
       } else {
-        console.log("four");
         $(".intro").css("position", "static");
       }
     });
