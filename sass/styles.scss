@@ -27,10 +27,10 @@ $text-shadow: -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange,
   font-size: 10px;
   font-family: "montserrat", sans-serif;
   text-align: center;
+  z-index: 1;
   &::selection {
     background-color: transparentize($main-orange, 0.3);
   }
-  z-index: 1;
 }
 
 body {
@@ -50,8 +50,6 @@ section {
 }
 .intro {
   position: fixed;
-  // min-width: 100%;
-  // overflow: hidden;
   width: 100vw;
   height: 100vh;
   z-index: 0;
@@ -89,14 +87,20 @@ section {
 // INTRO SECTION
 .intro-dude {
   margin: 5%;
+  margin-top: 50px;
+  max-width: 450px;
+  max-height: 450px;
 }
 #svg-master {
-  max-width: 100vw;
+  width: 100%;
   height: auto;
 }
 
 .fa-chevron-down {
-  margin: 10%;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 3rem;
   color: $main-orange;
   animation: chevron-slide 3s ease-in-out infinite;
@@ -105,7 +109,7 @@ section {
 }
 @keyframes chevron-slide {
   50% {
-    transform: translate(0px, 10px);
+    transform: translate(-50%, 10px);
     opacity: 1;
   }
 }
@@ -210,6 +214,9 @@ a {
 
 // PROJECTS
 
+.projects {
+  margin-top: 20px;
+}
 img {
   width: 100%;
   height: 175px;
@@ -225,6 +232,7 @@ img {
 .project-wrapper {
   position: relative;
   width: 110%;
+  max-width: 400px;
   height: auto;
   overflow: hidden;
   margin: 10px;

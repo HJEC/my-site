@@ -56,14 +56,20 @@ section {
     padding-bottom: 3px; }
 
 .intro-dude {
-  margin: 5%; }
+  margin: 5%;
+  margin-top: 50px;
+  max-width: 450px;
+  max-height: 450px; }
 
 #svg-master {
-  max-width: 100vw;
+  width: 100%;
   height: auto; }
 
 .fa-chevron-down {
-  margin: 10%;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 3rem;
   color: orange;
   animation: chevron-slide 3s ease-in-out infinite;
@@ -72,7 +78,7 @@ section {
 
 @keyframes chevron-slide {
   50% {
-    transform: translate(0px, 10px);
+    transform: translate(-50%, 10px);
     opacity: 1; } }
 
 .accordion {
@@ -153,6 +159,9 @@ a {
 .design-tools {
   grid-area: design; }
 
+.projects {
+  margin-top: 20px; }
+
 img {
   width: 100%;
   height: 175px;
@@ -166,6 +175,7 @@ img {
 .project-wrapper {
   position: relative;
   width: 110%;
+  max-width: 400px;
   height: auto;
   overflow: hidden;
   margin: 10px; }
