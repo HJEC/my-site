@@ -5,9 +5,6 @@ $century: "Century Gothic", sans-serif;
 $text-shadow: -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange,
   1px 1px 0 orange;
 
-// FONTS
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-
 %flex-center-column {
   display: flex;
   flex-direction: column;
@@ -19,6 +16,9 @@ $text-shadow: -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange,
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// FONTS
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 // GENERAL SETTINGS
 * {
@@ -42,8 +42,8 @@ section {
   width: 80%;
   @extend %flex-center-column;
 }
-// HEADER //
 
+// INTRO SECTION
 .intro-wrapper {
   height: 100vh;
   width: 100%;
@@ -83,8 +83,18 @@ section {
     border-bottom: 2px solid $main-orange;
     padding-bottom: 3px;
   }
+  &::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    background-color: rgb(100, 255, 218);
+    opacity: 0.5;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  }
 }
-// INTRO SECTION
 .intro-dude {
   margin: 5%;
   margin-top: 50px;
@@ -142,7 +152,7 @@ section {
   text-align: justify;
   height: 0px;
   overflow: hidden;
-  transition: height 0.8s ease-out;
+  transition: height 0.6s ease-out;
 }
 
 h2 {

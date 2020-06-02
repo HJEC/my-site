@@ -54,6 +54,16 @@ section {
     transform: scale(1.1) translate(0px, 3px);
     border-bottom: 2px solid orange;
     padding-bottom: 3px; }
+  .fab::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    background-color: #64ffda;
+    opacity: 0.5;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; }
 
 .intro-dude {
   margin: 5%;
@@ -104,7 +114,7 @@ section {
   text-align: justify;
   height: 0px;
   overflow: hidden;
-  transition: height 0.8s ease-out; }
+  transition: height 0.6s ease-out; }
 
 h2 {
   font-size: 3rem;

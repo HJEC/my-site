@@ -6,7 +6,6 @@ window.onload = function() {
   );
 
   // Parallax fade out the intro section on scrollHeight
-
   function parallaxFade() {
     $(window).scroll(function() {
       // Checking width after scroll prevents function from running inbetween screen resizing
