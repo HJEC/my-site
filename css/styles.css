@@ -50,24 +50,37 @@ section {
   margin: auto 6px;
   cursor: pointer;
   transition: transform 0.2s ease; }
-  .fab:hover {
-    transform: scale(1.1) translate(0px, 3px);
-    border-bottom: 2px solid orange;
-    padding-bottom: 3px; }
-  .fab::after {
+  .fab:hover, .fab:focus, .fab:active {
+    transform: scale(1.1) translate(0px, 3px); }
+    .fab:hover:after, .fab:focus:after, .fab:active:after {
+      width: 100%; }
+  .fab:after {
     content: "";
     display: block;
-    width: 0px;
-    height: 1px;
+    width: 0;
+    height: 2px;
     position: relative;
-    bottom: 0.37em;
-    background-color: #64ffda;
-    opacity: 0.5;
+    bottom: -3px;
+    background-color: orange;
+    opacity: 0.8;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; }
+
+.resume {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f9f9f9;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 15px;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+  background-color: orange; }
+  .resume:active, .resume:hover, .resume:focus {
+    color: gray;
+    background-color: #e0e0e0; }
 
 .intro-dude {
   margin: 5%;
-  margin-top: 50px;
   max-width: 450px;
   max-height: 450px; }
 
@@ -127,12 +140,28 @@ em,
 a {
   font-size: 1.5rem; }
 
-a {
+p a {
+  position: relative;
+  display: inline-block;
   color: orange;
   cursor: pointer;
-  text-decoration: none; }
-  a:hover {
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; }
+  p a:hover, p a:focus, p a:active {
     color: #005aff; }
+    p a:hover:after, p a:focus:after, p a:active:after {
+      width: 100%; }
+  p a:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    position: relative;
+    bottom: 1px;
+    background-color: #005aff;
+    opacity: 0.5;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; }
 
 .tools-grid {
   height: 0px;
@@ -191,6 +220,9 @@ img {
   margin: 10px; }
   .project-wrapper:hover {
     box-shadow: 10px 10px 15px -10px rgba(0, 0, 0, 0.35), -10px 10px 15px -10px rgba(0, 0, 0, 0.35), 0px 10px 15px -10px rgba(0, 0, 0, 0.35); }
+  .project-wrapper a,
+  .project-wrapper em {
+    color: orange; }
 
 .project-text {
   position: absolute;

@@ -78,26 +78,48 @@ section {
   margin: auto 6px;
   cursor: pointer;
   transition: transform 0.2s ease;
-  &:hover {
+
+  &:hover,
+  &:focus,
+  &:active {
     transform: scale(1.1) translate(0px, 3px);
-    border-bottom: 2px solid $main-orange;
-    padding-bottom: 3px;
+    &:after {
+      width: 100%;
+    }
   }
-  &::after {
+  &:after {
     content: "";
     display: block;
-    width: 0px;
-    height: 1px;
+    width: 0;
+    height: 2px;
     position: relative;
-    bottom: 0.37em;
-    background-color: rgb(100, 255, 218);
-    opacity: 0.5;
+    bottom: -3px;
+    background-color: $main-orange;
+    opacity: 0.8;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   }
 }
+
+.resume {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $off-white;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 15px;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+  background-color: $main-orange;
+  &:active,
+  &:hover,
+  &:focus {
+    color: invert($main-orange, 50%);
+    background-color: darken($off-white, 10%);
+  }
+}
+
 .intro-dude {
   margin: 5%;
-  margin-top: 50px;
   max-width: 450px;
   max-height: 450px;
 }
@@ -168,12 +190,32 @@ a {
   font-size: 1.5rem;
 }
 
-a {
+p a {
+  position: relative;
+  display: inline-block;
   color: $main-orange;
   cursor: pointer;
   text-decoration: none;
-  &:hover {
+  text-decoration-skip-ink: auto;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  &:hover,
+  &:focus,
+  &:active {
     color: complement($main-orange);
+    &:after {
+      width: 100%;
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    position: relative;
+    bottom: 1px;
+    background-color: complement($main-orange);
+    opacity: 0.5;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   }
 }
 
@@ -250,6 +292,11 @@ img {
     box-shadow: 10px 10px 15px -10px rgba(0, 0, 0, 0.35),
       -10px 10px 15px -10px rgba(0, 0, 0, 0.35),
       -0px 10px 15px -10px rgba(0, 0, 0, 0.35);
+  }
+
+  a,
+  em {
+    color: $main-orange;
   }
 }
 
