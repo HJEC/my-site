@@ -9,7 +9,7 @@ window.onload = function() {
   function parallaxFade() {
     $(window).scroll(function() {
       // Checking width after scroll prevents function from running inbetween screen resizing
-      if ($(window).width() <= 770) {
+      if ($(window).width() <= 1024) {
         if ($(this).scrollTop() > 0) {
           $(".intro").css({
             opacity: 1 - ($(window).scrollTop() / $(".intro").height()) * 1.5,

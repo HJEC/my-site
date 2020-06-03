@@ -278,3 +278,26 @@ img {
     .project-links a:hover {
       color: #f9f9f9;
       transform: scale(1.05) translate(3px, 5px); }
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template: "intro about projects";
+    align-items: start; }
+  .intro-wrapper {
+    height: auto; }
+  .intro {
+    grid-area: intro;
+    width: 80%;
+    position: static;
+    height: auto;
+    margin: auto; }
+  .fa-chevron-down {
+    display: none !important; }
+  .about {
+    grid-area: about;
+    width: 80%; }
+  .projects {
+    grid-area: projects;
+    width: 100%;
+    overflow: scroll; } }
