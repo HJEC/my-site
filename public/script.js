@@ -66,17 +66,6 @@ window.onload = function() {
   });
 
   // fade in contact section
-  $(window).scroll(function() {
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
-    var elemTop = $(".contact").offset().top;
-    if (elemTop <= docViewBottom && elemTop >= docViewTop) {
-      console.log(docViewBottom - docViewTop);
-      $(".contact").css({
-        opacity: (docViewBottom - docViewTop) * 0.1
-      });
-    }
-  });
 
   fetch("https://ranmoji.herokuapp.com/emojis/api/v.1.0/")
     .then(response => response.json())
