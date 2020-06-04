@@ -101,7 +101,11 @@ section {
   color: orange;
   animation: chevron-slide 3s ease-in-out infinite;
   opacity: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 0.5s ease; }
+  .fa-chevron-down:hover {
+    color: #005aff;
+    opacity: 1; }
 
 @keyframes chevron-slide {
   50% {
@@ -202,9 +206,6 @@ p a {
 
 .design-tools {
   grid-area: design; }
-
-.projects {
-  margin-top: 20px; }
 
 img {
   width: 100%;

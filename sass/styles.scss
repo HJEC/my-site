@@ -152,6 +152,11 @@ section {
   animation: chevron-slide 3s ease-in-out infinite;
   opacity: 0;
   cursor: pointer;
+  transition: all 0.5s ease;
+  &:hover {
+    color: complement($main-orange);
+    opacity: 1;
+  }
 }
 @keyframes chevron-slide {
   50% {
@@ -286,7 +291,7 @@ p a {
 // PROJECTS
 
 .projects {
-  margin-top: 20px;
+  // margin-top: 20px;
 }
 img {
   width: 100%;
