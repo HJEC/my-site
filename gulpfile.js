@@ -22,10 +22,10 @@ gulp.task("css", function() {
 
 gulp.task("serve", function() {
   browserSync.init({
-    server: "./public"
+    server: "./"
   });
   gulp.watch("./sass/*.scss", browserSync.stream());
-  gulp.watch("./public/*.html").on("change", browserSync.reload);
+  gulp.watch("./*.html").on("change", browserSync.reload);
   gulp.watch("./public/*.js").on("change", browserSync.reload);
 });
 
@@ -35,7 +35,7 @@ gulp.task("watch", function() {
   gulp.watch("./sass/**/*.scss", gulp.series("sass"));
   gulp.watch("./css/*.css", gulp.series("css"));
   gulp.watch("./*.html", gulp.series("css"));
-  gulp.watch("./*.js", gulp.series("css"));
+  gulp.watch("./public/*.js", gulp.series("css"));
 });
 
 gulp.task("default", gulp.parallel("run", "watch", "serve"));
