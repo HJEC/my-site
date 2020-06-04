@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-body, section {
+body, section, footer {
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -32,13 +32,48 @@ section {
   display: none;
   top: 5px;
   right: 5px;
-  font-size: 3rem;
   color: orange;
   z-index: 10;
   transition: transform 0.5s ease, color 0.5s ease; }
   .home-button:hover {
     transform: scale(1.05) translateY(5px);
     color: #005aff; }
+  .home-button i {
+    font-size: 3rem; }
+
+h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 15px; }
+
+p,
+strong,
+em,
+a {
+  font-size: 1.5rem; }
+
+p a {
+  position: relative;
+  display: inline-block;
+  color: orange;
+  cursor: pointer;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; }
+  p a:hover, p a:focus, p a:active {
+    color: #005aff; }
+    p a:hover:after, p a:focus:after, p a:active:after {
+      width: 100%; }
+  p a:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    position: relative;
+    bottom: 1px;
+    background-color: #005aff;
+    opacity: 0.5;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; }
 
 .intro-wrapper {
   height: 100vh;
@@ -65,17 +100,17 @@ section {
     #title-name span:hover, #title-name span:focus, #title-name span:active {
       color: orange; }
 
-.fab {
+.slide-link {
   color: rgba(255, 165, 0, 0.7);
   font-size: 2rem;
   margin: auto 10px;
   cursor: pointer;
   transition: transform 0.2s ease; }
-  .fab:hover, .fab:focus, .fab:active {
+  .slide-link:hover, .slide-link:focus, .slide-link:active {
     transform: scale(1.1) translate(0px, 3px); }
-    .fab:hover:after, .fab:focus:after, .fab:active:after {
+    .slide-link:hover:after, .slide-link:focus:after, .slide-link:active:after {
       width: 100%; }
-  .fab:after {
+  .slide-link:after {
     content: "";
     display: block;
     width: 0;
@@ -99,7 +134,7 @@ section {
   .resume:active, .resume:hover, .resume:focus {
     color: gray;
     background-color: #e0e0e0;
-    box-shadow: inset 4px 0px 3px -5px rgba(0, 0, 0, 0.75), inset -4px 0px 3px -5px rgba(0, 0, 0, 0.75), inset 0px 4px 3px -5px rgba(0, 0, 0, 0.75), inset 0px -3px 3px -5px rgba(0, 0, 0, 0.75); }
+    padding: 5px 15px; }
 
 #svg-master {
   width: 90%;
@@ -151,40 +186,6 @@ section {
   overflow: hidden;
   text-align: justify;
   transition: height 0.6s ease-out; }
-
-h2 {
-  font-size: 3rem;
-  font-weight: 500;
-  margin: 15px; }
-
-p,
-strong,
-em,
-a {
-  font-size: 1.5rem; }
-
-p a {
-  position: relative;
-  display: inline-block;
-  color: orange;
-  cursor: pointer;
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
-  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; }
-  p a:hover, p a:focus, p a:active {
-    color: #005aff; }
-    p a:hover:after, p a:focus:after, p a:active:after {
-      width: 100%; }
-  p a:after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    position: relative;
-    bottom: 1px;
-    background-color: #005aff;
-    opacity: 0.5;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; }
 
 .tools-grid {
   height: 0px;
@@ -344,8 +345,59 @@ img {
   color: orange;
   font-size: 2rem; }
 
-.personal-text {
-  text-align: left; }
+.contact p {
+  max-width: 80%;
+  text-align: center; }
+
+.shoot-email {
+  margin: 20px;
+  color: #f9f9f9;
+  background-color: orange;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-bottom: solid 3px #f9f9f9;
+  border-right: solid 3px #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 3px 3px 0px 0px orange;
+  transition: all 0.5s ease; }
+  .shoot-email:hover {
+    color: orange;
+    background-color: #f9f9f9;
+    padding: 5px 20px;
+    box-shadow: 3px 3px 0px 0px orange, 2px 5px 10px -2px rgba(0, 0, 0, 0.5);
+    border: solid 3px orange; }
+
+footer {
+  padding: 20px;
+  background-color: #222222;
+  width: 100%; }
+  footer .fab {
+    color: #f9f9f9;
+    background-color: #555555;
+    font-size: 1.5rem;
+    margin: 5px 3px;
+    padding: 15px;
+    transition: all 0.5s ease;
+    border-radius: 3px; }
+    footer .fab:hover {
+      transform: scale(1.2); }
+  footer .fa-linkedin:hover {
+    background-color: #0e76a8; }
+  footer .fa-github:hover {
+    background-color: #6e5494; }
+  footer .fa-codepen:hover {
+    background-color: #76daff; }
+  footer .fa-hackerrank:hover {
+    background-color: #2ec866; }
+  footer .fa-instagram:hover {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%); }
+  footer .fa-spotify:hover {
+    background-color: #1db954; }
+  footer p {
+    font-size: 1rem;
+    padding: 10px;
+    color: #f9f9f9; }
 
 @media screen and (min-width: 1024px) {
   * {

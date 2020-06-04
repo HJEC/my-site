@@ -1,6 +1,7 @@
 // SASS VARIABLES
 $main-orange: orange;
 $off-white: #f9f9f9;
+$dark-grey: #222222;
 $century: "Century Gothic", sans-serif;
 $text-shadow: -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange,
   1px 1px 0 orange;
@@ -58,7 +59,6 @@ section {
   display: none;
   top: 5px;
   right: 5px;
-  font-size: 3rem;
   color: $main-orange;
   z-index: 10;
   transition: transform 0.5s ease, color 0.5s ease;
@@ -66,8 +66,52 @@ section {
     transform: scale(1.05) translateY(5px);
     color: complement($main-orange);
   }
+  i {
+    font-size: 3rem;
+  }
 }
 
+h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 15px;
+}
+
+p,
+strong,
+em,
+a {
+  font-size: 1.5rem;
+}
+
+p a {
+  position: relative;
+  display: inline-block;
+  color: $main-orange;
+  cursor: pointer;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  &:hover,
+  &:focus,
+  &:active {
+    color: complement($main-orange);
+    &:after {
+      width: 100%;
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    position: relative;
+    bottom: 1px;
+    background-color: complement($main-orange);
+    opacity: 0.5;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  }
+}
 // INTRO SECTION
 .intro-wrapper {
   height: 100vh;
@@ -100,7 +144,7 @@ section {
   }
 }
 
-.fab {
+.slide-link {
   color: transparentize($main-orange, 0.3);
   font-size: 2rem;
   margin: auto 10px;
@@ -143,10 +187,7 @@ section {
   &:focus {
     color: invert($main-orange, 50%);
     background-color: darken($off-white, 10%);
-    box-shadow: inset 4px 0px 3px -5px rgba(0, 0, 0, 0.75),
-      inset -4px -0px 3px -5px rgba(0, 0, 0, 0.75),
-      inset 0px 4px 3px -5px rgba(0, 0, 0, 0.75),
-      inset 0px -3px 3px -5px rgba(0, 0, 0, 0.75);
+    padding: 5px 15px;
   }
 }
 
@@ -212,48 +253,6 @@ section {
   overflow: hidden;
   text-align: justify;
   transition: height 0.6s ease-out;
-}
-
-h2 {
-  font-size: 3rem;
-  font-weight: 500;
-  margin: 15px;
-}
-
-p,
-strong,
-em,
-a {
-  font-size: 1.5rem;
-}
-
-p a {
-  position: relative;
-  display: inline-block;
-  color: $main-orange;
-  cursor: pointer;
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
-  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  &:hover,
-  &:focus,
-  &:active {
-    color: complement($main-orange);
-    &:after {
-      width: 100%;
-    }
-  }
-  &:after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    position: relative;
-    bottom: 1px;
-    background-color: complement($main-orange);
-    opacity: 0.5;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  }
 }
 
 // TOOLS SECTION
@@ -454,9 +453,82 @@ img {
   font-size: 2rem;
 }
 
-// PERSONAL SECTION
-.personal-text {
-  text-align: left;
+// CONTACT SECTION
+.contact p {
+  max-width: 80%;
+  text-align: center;
+}
+.shoot-email {
+  margin: 20px;
+  color: $off-white;
+  background-color: $main-orange;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-bottom: solid 3px $off-white;
+  border-right: solid 3px $off-white;
+  border-radius: 4px;
+  box-shadow: 3px 3px 0px 0px $main-orange;
+  transition: all 0.5s ease;
+  &:hover {
+    color: $main-orange;
+    background-color: $off-white;
+    padding: 5px 20px;
+    box-shadow: 3px 3px 0px 0px $main-orange,
+      2px 5px 10px -2px rgba(0, 0, 0, 0.5);
+    border: solid 3px $main-orange;
+  }
+}
+
+// FOOTER
+footer {
+  @extend %flex-center-column;
+  padding: 20px;
+  background-color: $dark-grey;
+  width: 100%;
+  .fab {
+    color: $off-white;
+    background-color: lighten($dark-grey, 20%);
+    font-size: 1.5rem;
+    margin: 5px 3px;
+    padding: 15px;
+    transition: all 0.5s ease;
+    border-radius: 3px;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  .fa-linkedin:hover {
+    background-color: #0e76a8;
+  }
+  .fa-github:hover {
+    background-color: #6e5494;
+  }
+  .fa-codepen:hover {
+    background-color: #76daff;
+  }
+  .fa-hackerrank:hover {
+    background-color: #2ec866;
+  }
+  .fa-instagram:hover {
+    background: #d6249f;
+    background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+  }
+  .fa-spotify:hover {
+    background-color: #1db954;
+  }
+  p {
+    font-size: 1rem;
+    padding: 10px;
+    // margin-top: 10px;
+    color: $off-white;
+  }
 }
 
 // SWITCH SCREEN LAYOUT ABOVE 1024p
