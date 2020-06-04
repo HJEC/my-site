@@ -17,7 +17,7 @@ gulp.task("css", function() {
   return gulp
     .src("./css/*.css")
     .pipe(uglifycss({ uglyComments: true }))
-    .pipe(gulp.dest("./public/"));
+    .pipe(gulp.dest("./dist/"));
 });
 
 gulp.task("serve", function() {
