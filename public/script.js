@@ -22,8 +22,6 @@ window.onload = function() {
   // Parallax fade out the intro section on scrollHeight
   function parallaxFade() {
     $(window).scroll(function() {
-      // Checking width after scroll prevents function from running inbetween screen resizing
-      // if ($(window).width() <= 1024) {
       if ($(this).scrollTop() > 0) {
         $(".intro").css({
           opacity: 1 - ($(window).scrollTop() / $(".intro").height()) * 1.5,
@@ -32,9 +30,6 @@ window.onload = function() {
       } else {
         $(".intro").css({ opacity: "1", position: "fixed" });
       }
-      // } else {
-      //   $(".intro").css("position", "static");
-      // }
     });
   }
 
@@ -65,9 +60,22 @@ window.onload = function() {
       .css("pointer-events", "auto");
   });
 
-  // Flip more-soon card animation
+  // flip more-soon card animation
   $(".more-soon").hover(function() {
     $(this).toggleClass("flip-card");
+  });
+
+  // fade in contact section
+  $(window).scroll(function() {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var elemTop = $(".contact").offset().top;
+    if (elemTop <= docViewBottom && elemTop >= docViewTop) {
+      console.log(docViewBottom - docViewTop);
+      $(".contact").css({
+        opacity: (docViewBottom - docViewTop) * 0.1
+      });
+    }
   });
 
   fetch("https://ranmoji.herokuapp.com/emojis/api/v.1.0/")
