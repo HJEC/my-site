@@ -373,8 +373,10 @@ img {
 
 // MORE SOON - FLIP CARD
 .more-soon {
+  max-width: 400px;
+  min-height: 200px;
   width: 110%;
-  height: auto;
+  height: 100%;
 
   //flip
   perspective: 400px;

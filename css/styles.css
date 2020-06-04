@@ -275,8 +275,10 @@ img {
       transform: scale(1.05) translate(3px, 5px); }
 
 .more-soon {
+  max-width: 400px;
+  min-height: 200px;
   width: 110%;
-  height: auto;
+  height: 100%;
   perspective: 400px; }
   .more-soon:hover .flipper,
   .more-soon .flip-card .flipper {

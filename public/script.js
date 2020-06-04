@@ -55,6 +55,7 @@ window.onload = function() {
   $(".more-soon").hover(function() {
     $(this).toggleClass("flip-card");
   });
+
   fetch("https://ranmoji.herokuapp.com/emojis/api/v.1.0/")
     .then(response => response.json())
     .then(data => {
