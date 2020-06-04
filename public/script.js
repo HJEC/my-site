@@ -5,22 +5,36 @@ window.onload = function() {
     target.text().replace(/./g, `<span class="hover-letter">$&</span>`)
   );
 
+  // home button scroll-to-top
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 300) {
+      $(".home-button").fadeIn();
+    } else {
+      $(".home-button").fadeOut("slow");
+    }
+  });
+
+  $(".home-button").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });
+
   // Parallax fade out the intro section on scrollHeight
   function parallaxFade() {
     $(window).scroll(function() {
       // Checking width after scroll prevents function from running inbetween screen resizing
-      if ($(window).width() <= 1024) {
-        if ($(this).scrollTop() > 0) {
-          $(".intro").css({
-            opacity: 1 - ($(window).scrollTop() / $(".intro").height()) * 1.5,
-            position: "fixed"
-          });
-        } else {
-          $(".intro").css({ opacity: "1", position: "fixed" });
-        }
+      // if ($(window).width() <= 1024) {
+      if ($(this).scrollTop() > 0) {
+        $(".intro").css({
+          opacity: 1 - ($(window).scrollTop() / $(".intro").height()) * 1.5,
+          position: "fixed"
+        });
       } else {
-        $(".intro").css("position", "static");
+        $(".intro").css({ opacity: "1", position: "fixed" });
       }
+      // } else {
+      //   $(".intro").css("position", "static");
+      // }
     });
   }
 
