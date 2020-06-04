@@ -48,7 +48,7 @@ section {
     width: 60%;
   }
   @media screen and (min-width: 1024px) {
-    width: 500px;
+    // width: 500px;
   }
 }
 
@@ -59,14 +59,14 @@ section {
 }
 .intro {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: 0;
 }
 
 #title-name {
   white-space: nowrap;
-  margin: 50px auto 25px auto;
+  margin: 40px auto 15px auto;
   span {
     font-size: 3rem;
     cursor: crosshair;
@@ -75,7 +75,9 @@ section {
     letter-spacing: 0.09rem;
     -webkit-text-stroke: 1px $main-orange;
     transition: 0.3s ease-in;
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       color: orange;
     }
   }
@@ -84,7 +86,7 @@ section {
 .fab {
   color: transparentize($main-orange, 0.3);
   font-size: 2rem;
-  margin: auto 6px;
+  margin: auto 10px;
   cursor: pointer;
   transition: transform 0.2s ease;
 
@@ -115,7 +117,7 @@ section {
   color: $off-white;
   text-decoration: none;
   padding: 5px 10px;
-  margin: 15px;
+  margin: 20px;
   border-radius: 4px;
   transition: all 0.5s ease;
   background-color: $main-orange;
@@ -132,13 +134,12 @@ section {
 }
 
 .intro-dude {
-  margin: 5%;
-  max-width: 450px;
-  max-height: 450px;
 }
 #svg-master {
-  width: 100%;
-  height: auto;
+  width: 90%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 400px;
 }
 
 .fa-chevron-down {
@@ -161,6 +162,8 @@ section {
 
 // ABOUT SECTION
 
+.about {
+}
 .accordion {
   cursor: pointer;
   transition: transform 0.4s ease, color 0.4s ease;
@@ -185,9 +188,9 @@ section {
 }
 
 .about-text {
-  text-align: justify;
   height: 0px;
   overflow: hidden;
+  text-align: justify;
   transition: height 0.6s ease-out;
 }
 
@@ -239,7 +242,9 @@ p a {
   height: 0px;
   transition: height 0.5s ease-out;
   overflow: hidden;
+  max-width: 700px;
 }
+
 .grid-border {
   display: grid;
   grid-template:
@@ -255,10 +260,10 @@ p a {
   div {
     background-color: $off-white;
     color: $main-orange;
-    padding: 10px;
+    padding: 15px;
   }
   p {
-    text-align: left;
+    text-align: center;
     font-size: 1.2rem;
     margin: 5px;
     color: complement($main-orange);
@@ -285,7 +290,7 @@ p a {
 }
 img {
   width: 100%;
-  height: 175px;
+  height: 200px;
   cursor: crosshair;
   object-fit: cover;
   border-radius: 5px;
@@ -366,9 +371,83 @@ img {
   }
 }
 
+// MORE SOON - FLIP CARD
+.more-soon {
+  width: 110%;
+  height: auto;
+
+  //flip
+  perspective: 400px;
+  &:hover .flipper,
+  .flip-card .flipper {
+    transform: rotateY(180deg);
+  }
+  .flipper {
+    max-width: 400px;
+    min-height: 200px;
+    width: 100%;
+    height: 100%;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  .front-card,
+  .back-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .front-card {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transform: rotateY(0deg);
+    box-shadow: inset 0px 0px 10px 0px rgba(184, 184, 184, 0.8);
+  }
+  .back-card {
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+    color: $off-white;
+    background-color: $main-orange;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px 0px rgba(184, 184, 184, 0.8);
+  }
+}
+.fa-plus {
+  color: $main-orange;
+  font-size: 2rem;
+}
+
 // SWITCH SCREEN LAYOUT ABOVE 1024p
 
-@media screen (min-width: 1024px) {
-  body {
+@media screen and (min-width: 1024px) {
+  * {
+    font-size: 15px;
+  }
+
+  .intro {
+    width: 100%;
+  }
+  // projects section flexbox
+  .projects {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #svg-master {
+    max-width: 600px;
+    max-height: 600px;
   }
 }

@@ -25,9 +25,6 @@ section {
   @media screen and (min-width: 650px) {
     section {
       width: 60%; } }
-  @media screen and (min-width: 1024px) {
-    section {
-      width: 500px; } }
 
 .intro-wrapper {
   height: 100vh;
@@ -35,13 +32,13 @@ section {
 
 .intro {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: 0; }
 
 #title-name {
   white-space: nowrap;
-  margin: 50px auto 25px auto; }
+  margin: 40px auto 15px auto; }
   #title-name span {
     font-size: 3rem;
     cursor: crosshair;
@@ -50,13 +47,13 @@ section {
     letter-spacing: 0.09rem;
     -webkit-text-stroke: 1px orange;
     transition: 0.3s ease-in; }
-    #title-name span:hover {
+    #title-name span:hover, #title-name span:focus, #title-name span:active {
       color: orange; }
 
 .fab {
   color: rgba(255, 165, 0, 0.7);
   font-size: 2rem;
-  margin: auto 6px;
+  margin: auto 10px;
   cursor: pointer;
   transition: transform 0.2s ease; }
   .fab:hover, .fab:focus, .fab:active {
@@ -80,7 +77,7 @@ section {
   color: #f9f9f9;
   text-decoration: none;
   padding: 5px 10px;
-  margin: 15px;
+  margin: 20px;
   border-radius: 4px;
   transition: all 0.5s ease;
   background-color: orange; }
@@ -89,14 +86,11 @@ section {
     background-color: #e0e0e0;
     box-shadow: inset 4px 0px 3px -5px rgba(0, 0, 0, 0.75), inset -4px 0px 3px -5px rgba(0, 0, 0, 0.75), inset 0px 4px 3px -5px rgba(0, 0, 0, 0.75), inset 0px -3px 3px -5px rgba(0, 0, 0, 0.75); }
 
-.intro-dude {
-  margin: 5%;
-  max-width: 450px;
-  max-height: 450px; }
-
 #svg-master {
-  width: 100%;
-  height: auto; }
+  width: 90%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 400px; }
 
 .fa-chevron-down {
   position: absolute;
@@ -134,9 +128,9 @@ section {
     content: "\2796"; }
 
 .about-text {
-  text-align: justify;
   height: 0px;
   overflow: hidden;
+  text-align: justify;
   transition: height 0.6s ease-out; }
 
 h2 {
@@ -176,7 +170,8 @@ p a {
 .tools-grid {
   height: 0px;
   transition: height 0.5s ease-out;
-  overflow: hidden; }
+  overflow: hidden;
+  max-width: 700px; }
 
 .grid-border {
   display: grid;
@@ -189,9 +184,9 @@ p a {
   .grid-border div {
     background-color: #f9f9f9;
     color: orange;
-    padding: 10px; }
+    padding: 15px; }
   .grid-border p {
-    text-align: left;
+    text-align: center;
     font-size: 1.2rem;
     margin: 5px;
     color: #005aff; }
@@ -213,7 +208,7 @@ p a {
 
 img {
   width: 100%;
-  height: 175px;
+  height: 200px;
   cursor: crosshair;
   object-fit: cover;
   border-radius: 5px; }
@@ -279,25 +274,64 @@ img {
       color: #f9f9f9;
       transform: scale(1.05) translate(3px, 5px); }
 
-@media screen and (min-width: 1024px) {
-  body {
-    display: grid;
-    grid-template: "intro about projects";
-    align-items: start; }
-  .intro-wrapper {
-    height: auto; }
-  .intro {
-    grid-area: intro;
-    width: 80%;
-    position: static;
-    height: auto;
-    margin: auto; }
-  .fa-chevron-down {
-    display: none !important; }
-  .about {
-    grid-area: about;
-    width: 80%; }
-  .projects {
-    grid-area: projects;
+.more-soon {
+  width: 110%;
+  height: auto;
+  perspective: 400px; }
+  .more-soon:hover .flipper,
+  .more-soon .flip-card .flipper {
+    transform: rotateY(180deg); }
+  .more-soon .flipper {
+    max-width: 400px;
+    min-height: 200px;
     width: 100%;
-    overflow: scroll; } }
+    height: 100%;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative; }
+  .more-soon .front-card,
+  .more-soon .back-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .more-soon .front-card {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transform: rotateY(0deg);
+    box-shadow: inset 0px 0px 10px 0px rgba(184, 184, 184, 0.8); }
+  .more-soon .back-card {
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+    color: #f9f9f9;
+    background-color: orange;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px 0px rgba(184, 184, 184, 0.8); }
+
+.fa-plus {
+  color: orange;
+  font-size: 2rem; }
+
+@media screen and (min-width: 1024px) {
+  * {
+    font-size: 15px; }
+  .intro {
+    width: 100%; }
+  .projects {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; } }
+
+@media screen and (min-width: 1400px) {
+  #svg-master {
+    max-width: 600px;
+    max-height: 600px; } }
