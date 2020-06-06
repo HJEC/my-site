@@ -1,4 +1,4 @@
-window.onload = function() {
+$(document).ready(function() {
   // Seperate the header letters into individual spans. (cleaner markup)
   let target = $("#title-name");
   target.html(
@@ -21,6 +21,7 @@ window.onload = function() {
 
   // Parallax fade out the intro section on scrollHeight
   function parallaxFade() {
+    console.log("now");
     $(window).scroll(function() {
       if ($(this).scrollTop() > 0) {
         $(".intro").css({
@@ -33,7 +34,7 @@ window.onload = function() {
     });
   }
 
-  $(document).ready(parallaxFade);
+  parallaxFade();
   $(window).resize(parallaxFade);
 
   // Scripting the accordion slide for about section
@@ -72,4 +73,4 @@ window.onload = function() {
     .then(data => {
       console.log("emoji:", data.emoji);
     });
-};
+});
