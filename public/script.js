@@ -47,7 +47,7 @@ window.onload = function() {
     }
   });
 
-  /* Swap out the static images for gifs for the project tiles */
+  /* Swap out the static images for videos in the project tiles */
   $(".project-wrapper").hover(function() {
     $(this)
       .find(".demo-jpg")
