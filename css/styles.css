@@ -230,7 +230,8 @@ p a {
   width: 100%;
   margin-bottom: 30px; }
 
-img {
+img,
+video {
   width: 100%;
   height: 200px;
   cursor: crosshair;
