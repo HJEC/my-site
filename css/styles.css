@@ -382,6 +382,8 @@ footer {
     border-radius: 3px; }
     footer .fab:hover {
       transform: scale(1.2); }
+  footer .fa-angellist:hover {
+    background-color: #000; }
   footer .fa-linkedin:hover {
     background-color: #0e76a8; }
   footer .fa-github:hover {

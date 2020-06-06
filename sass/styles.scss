@@ -191,8 +191,6 @@ p a {
   }
 }
 
-.intro-dude {
-}
 #svg-master {
   width: 90%;
   height: 100%;
@@ -500,6 +498,9 @@ footer {
     &:hover {
       transform: scale(1.2);
     }
+  }
+  .fa-angellist:hover {
+    background-color: #000;
   }
   .fa-linkedin:hover {
     background-color: #0e76a8;
