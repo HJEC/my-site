@@ -314,6 +314,7 @@ p a {
     margin-bottom: 30px;
   }
 }
+
 img,
 video {
   width: 100%;
@@ -322,6 +323,7 @@ video {
   object-fit: cover;
   border-radius: 5px;
 }
+
 // IMPORTANT -- DO NOT CHANGE THIS!
 .demo-gif {
   display: none;
@@ -526,10 +528,10 @@ footer {
     background-color: #1db954;
   }
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 10px;
-    // margin-top: 10px;
     color: $off-white;
+    font-family: "courier new";
   }
 }
 

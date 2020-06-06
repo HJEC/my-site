@@ -396,9 +396,10 @@ footer {
   footer .fa-spotify:hover {
     background-color: #1db954; }
   footer p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 10px;
-    color: #f9f9f9; }
+    color: #f9f9f9;
+    font-family: "courier new"; }
 
 @media screen and (min-width: 1024px) {
   * {
