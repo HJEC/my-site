@@ -21,7 +21,6 @@ $(document).ready(function() {
 
   // Parallax fade out the intro section on scrollHeight
   function parallaxFade() {
-    console.log("now");
     $(window).scroll(function() {
       if ($(this).scrollTop() > 0) {
         $(".intro").css({
@@ -71,6 +70,6 @@ $(document).ready(function() {
   fetch("https://ranmoji.herokuapp.com/emojis/api/v.1.0/")
     .then(response => response.json())
     .then(data => {
-      console.log("emoji:", data.emoji);
+      // console.log("emoji:", data.emoji);
     });
 });
