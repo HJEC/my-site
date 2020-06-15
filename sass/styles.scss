@@ -133,7 +133,8 @@ p a {
     cursor: crosshair;
     color: $off-white;
     font-family: $century;
-    letter-spacing: 0.09rem;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
     -webkit-text-stroke: 1px $main-orange;
     transition: 0.3s ease-in;
     &:hover,
