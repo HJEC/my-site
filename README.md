@@ -1,3 +1,12 @@
-## My personal web-developer portfolio site.
+## Personal web-developer portfolio site.
 
-#### (It's a work-in-progress, shhh...)
+### Version 1.0 - 
+
+Further changes coming:
+
+- screenreader friendly design
+- keyboard accessible controls
+- desktop layout (site is currently configured for mostly mobile portrait mode) 
+
+
+
