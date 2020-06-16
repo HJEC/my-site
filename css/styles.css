@@ -32,7 +32,7 @@ section {
   display: none;
   top: 5px;
   right: 5px;
-  color: orange;
+  color: #ffa500;
   z-index: 10;
   transition: transform 0.5s ease, color 0.5s ease; }
   .home-button:hover {
@@ -55,7 +55,7 @@ a {
 p a {
   position: relative;
   display: inline-block;
-  color: orange;
+  color: #ffa500;
   cursor: pointer;
   text-decoration: none;
   text-decoration-skip-ink: auto;
@@ -91,14 +91,17 @@ p a {
   margin: 40px auto 15px auto; }
   #title-name span {
     font-size: 3rem;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 600;
     cursor: crosshair;
     color: #f9f9f9;
-    font-family: "Century Gothic", sans-serif;
-    letter-spacing: 0.09rem;
-    -webkit-text-stroke: 1px orange;
+    letter-spacing: 0.2rem;
+    -webkit-text-stroke: 1px #ffa500;
     transition: 0.3s ease-in; }
-    #title-name span:hover, #title-name span:focus, #title-name span:active {
+    #title-name span:hover, #title-name span:focus {
       color: orange; }
+    #title-name span::selection {
+      background-color: rgba(0, 0, 0, 0); }
 
 .slide-link {
   color: rgba(255, 165, 0, 0.7);
@@ -117,7 +120,7 @@ p a {
     height: 2px;
     position: relative;
     bottom: -3px;
-    background-color: orange;
+    background-color: #ffa500;
     opacity: 0.8;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; }
 
@@ -130,7 +133,7 @@ p a {
   margin: 20px;
   border-radius: 4px;
   transition: all 0.5s ease;
-  background-color: orange; }
+  background-color: #ffa500; }
   .resume:active, .resume:hover, .resume:focus {
     color: gray;
     background-color: #e0e0e0;
@@ -148,7 +151,7 @@ p a {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 3rem;
-  color: orange;
+  color: #ffa500;
   animation: chevron-slide 3s ease-in-out infinite;
   opacity: 0;
   cursor: pointer;
@@ -167,7 +170,7 @@ p a {
   transition: transform 0.4s ease, color 0.4s ease; }
   .accordion:hover {
     transform: scale(1.1) translate(5px, 5px);
-    color: orange; }
+    color: #ffa500; }
   .accordion:after {
     content: "\02795";
     font-size: 1rem;
@@ -177,7 +180,7 @@ p a {
     left: 10px; }
 
 .active {
-  color: orange; }
+  color: #ffa500; }
   .active:after {
     content: "\2796"; }
 
@@ -200,13 +203,13 @@ p a {
   display: grid;
   grid-template: "front front back back" "tools tools tools tools" "design design design design";
   grid-gap: 3px;
-  border: 3px orange solid;
+  border: 3px #ffa500 solid;
   border-radius: 3px;
-  background-color: orange;
+  background-color: #ffa500;
   width: 100%; }
   .grid-border div {
     background-color: #f9f9f9;
-    color: orange;
+    color: #ffa500;
     padding: 15px; }
   .grid-border p {
     text-align: center;
@@ -253,7 +256,7 @@ video {
     box-shadow: 10px 10px 15px -10px rgba(0, 0, 0, 0.35), -10px 10px 15px -10px rgba(0, 0, 0, 0.35), 0px 10px 15px -10px rgba(0, 0, 0, 0.35); }
   .project-wrapper a,
   .project-wrapper em {
-    color: orange; }
+    color: #ffa500; }
 
 .project-text {
   position: absolute;
@@ -307,7 +310,7 @@ video {
   perspective: 400px; }
   .more-soon:hover .flipper,
   .more-soon .flip-card .flipper {
-    transform: rotateY(180deg); }
+    transform: rotateX(-180deg); }
   .more-soon .flipper {
     max-width: 400px;
     min-height: 200px;
@@ -330,20 +333,20 @@ video {
     width: 100%;
     height: 100%;
     z-index: 2;
-    transform: rotateY(0deg);
+    transform: rotateX(0deg);
     box-shadow: inset 0px 0px 10px 0px rgba(184, 184, 184, 0.8); }
   .more-soon .back-card {
     width: 100%;
     height: 100%;
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
     color: #f9f9f9;
-    background-color: orange;
+    background-color: #ffa500;
     font-size: 2rem;
     font-weight: bold;
     box-shadow: 0px 0px 10px 0px rgba(184, 184, 184, 0.8); }
 
 .fa-plus {
-  color: orange;
+  color: #ffa500;
   font-size: 2rem; }
 
 .contact p {
@@ -353,20 +356,20 @@ video {
 .shoot-email {
   margin: 20px;
   color: #f9f9f9;
-  background-color: orange;
+  background-color: #ffa500;
   text-decoration: none;
   padding: 5px 10px;
   border-bottom: solid 3px #f9f9f9;
   border-right: solid 3px #f9f9f9;
   border-radius: 4px;
-  box-shadow: 3px 3px 0px 0px orange;
+  box-shadow: 3px 3px 0px 0px #ffa500;
   transition: all 0.5s ease; }
   .shoot-email:hover {
-    color: orange;
+    color: #ffa500;
     background-color: #f9f9f9;
     padding: 5px 20px;
-    box-shadow: 3px 3px 0px 0px orange, 2px 5px 10px -2px rgba(0, 0, 0, 0.5);
-    border: solid 3px orange; }
+    box-shadow: 3px 3px 0px 0px #ffa500, 2px 5px 10px -2px rgba(0, 0, 0, 0.5);
+    border: solid 3px #ffa500; }
 
 footer {
   padding: 20px;
@@ -398,10 +401,9 @@ footer {
   footer .fa-spotify:hover {
     background-color: #1db954; }
   footer p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 10px;
-    color: #f9f9f9;
-    font-family: "courier new"; }
+    color: #f9f9f9; }
 
 @media screen and (min-width: 1024px) {
   * {

@@ -1,10 +1,11 @@
 // SASS VARIABLES
-$main-orange: orange;
+$main-orange: #ffa500;
 $off-white: #f9f9f9;
 $dark-grey: #222222;
+$alt-blue: complement($main-orange);
 $century: "Century Gothic", sans-serif;
-$text-shadow: -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange,
-  1px 1px 0 orange;
+$text-shadow: -1px -1px 0 #ffa500, 1px -1px 0 #ffa500, -1px 1px 0 #ffa500,
+  1px 1px 0 #ffa500;
 
 %flex-center-column {
   display: flex;
@@ -28,8 +29,10 @@ html {
 * {
   margin: 0;
   box-sizing: border-box;
-  font-size: 10px;
-  font-family: "montserrat", sans-serif;
+  font : {
+    size: 10px;
+    family: "montserrat", sans-serif;
+  }
   text-align: center;
   z-index: 1;
   &::selection {
@@ -49,9 +52,6 @@ section {
   @media screen and (min-width: 650px) {
     width: 60%;
   }
-  @media screen and (min-width: 1024px) {
-    // width: 500px;
-  }
 }
 
 .home-button {
@@ -64,7 +64,7 @@ section {
   transition: transform 0.5s ease, color 0.5s ease;
   &:hover {
     transform: scale(1.05) translateY(5px);
-    color: complement($main-orange);
+    color: $alt-blue;
   }
   i {
     font-size: 3rem;
@@ -95,7 +95,7 @@ p a {
   &:hover,
   &:focus,
   &:active {
-    color: complement($main-orange);
+    color: $alt-blue;
     &:after {
       width: 100%;
     }
@@ -107,7 +107,7 @@ p a {
     height: 2px;
     position: relative;
     bottom: 1px;
-    background-color: complement($main-orange);
+    background-color: $alt-blue;
     opacity: 0.5;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   }
@@ -129,18 +129,22 @@ p a {
   white-space: nowrap;
   margin: 40px auto 15px auto;
   span {
-    font-size: 3rem;
+    font : {
+      size: 3rem;
+      family: $century;
+      weight: 600;
+    }
     cursor: crosshair;
     color: $off-white;
-    font-family: $century;
-    font-weight: 800;
     letter-spacing: 0.2rem;
     -webkit-text-stroke: 1px $main-orange;
     transition: 0.3s ease-in;
     &:hover,
-    &:focus,
-    &:active {
+    &:focus {
       color: orange;
+    }
+    &::selection {
+      background-color: rgba(0, 0, 0, 0);
     }
   }
 }
@@ -211,7 +215,7 @@ p a {
   cursor: pointer;
   transition: all 0.5s ease;
   &:hover {
-    color: complement($main-orange);
+    color: $alt-blue;
     opacity: 1;
   }
 }
@@ -288,7 +292,7 @@ p a {
     text-align: center;
     font-size: 1.2rem;
     margin: 5px;
-    color: complement($main-orange);
+    color: $alt-blue;
   }
 }
 
@@ -410,7 +414,7 @@ video {
   perspective: 400px;
   &:hover .flipper,
   .flip-card .flipper {
-    transform: rotateY(180deg);
+    transform: rotateX(-180deg);
   }
   .flipper {
     max-width: 400px;
@@ -436,13 +440,13 @@ video {
     width: 100%;
     height: 100%;
     z-index: 2;
-    transform: rotateY(0deg);
+    transform: rotateX(0deg);
     box-shadow: inset 0px 0px 10px 0px rgba(184, 184, 184, 0.8);
   }
   .back-card {
     width: 100%;
     height: 100%;
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
     color: $off-white;
     background-color: $main-orange;
     font-size: 2rem;
@@ -467,9 +471,11 @@ video {
   background-color: $main-orange;
   text-decoration: none;
   padding: 5px 10px;
-  border-bottom: solid 3px $off-white;
-  border-right: solid 3px $off-white;
-  border-radius: 4px;
+  border : {
+    bottom: solid 3px $off-white;
+    right: solid 3px $off-white;
+    radius: 4px;
+  }
   box-shadow: 3px 3px 0px 0px $main-orange;
   transition: all 0.5s ease;
   &:hover {
@@ -530,10 +536,9 @@ footer {
     background-color: #1db954;
   }
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 10px;
     color: $off-white;
-    font-family: "courier new";
   }
 }
 
