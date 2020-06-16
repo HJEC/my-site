@@ -3,7 +3,6 @@ $main-orange: #ffa500;
 $off-white: #f9f9f9;
 $dark-grey: #222222;
 $alt-blue: complement($main-orange);
-$century: "Century Gothic", sans-serif;
 $text-shadow: -1px -1px 0 #ffa500, 1px -1px 0 #ffa500, -1px 1px 0 #ffa500,
   1px 1px 0 #ffa500;
 
@@ -17,6 +16,28 @@ $text-shadow: -1px -1px 0 #ffa500, 1px -1px 0 #ffa500, -1px 1px 0 #ffa500,
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin link-slide($color, $bottom) {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color;
+    &:after {
+      width: 100%;
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    position: relative;
+    bottom: $bottom;
+    background-color: $color;
+    opacity: 0.8;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  }
 }
 
 // FONTS
@@ -92,25 +113,7 @@ p a {
   text-decoration: none;
   text-decoration-skip-ink: auto;
   transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  &:hover,
-  &:focus,
-  &:active {
-    color: $alt-blue;
-    &:after {
-      width: 100%;
-    }
-  }
-  &:after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    position: relative;
-    bottom: 1px;
-    background-color: $alt-blue;
-    opacity: 0.5;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  }
+  @include link-slide($alt-blue, 1px);
 }
 // INTRO SECTION
 .intro-wrapper {
@@ -131,7 +134,6 @@ p a {
   span {
     font : {
       size: 3rem;
-      family: $century;
       weight: 600;
     }
     cursor: crosshair;
@@ -155,25 +157,11 @@ p a {
   margin: auto 10px;
   cursor: pointer;
   transition: transform 0.2s ease;
-
+  @include link-slide($main-orange, -3px);
   &:hover,
   &:focus,
   &:active {
     transform: scale(1.1) translate(0px, 3px);
-    &:after {
-      width: 100%;
-    }
-  }
-  &:after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    position: relative;
-    bottom: -3px;
-    background-color: $main-orange;
-    opacity: 0.8;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   }
 }
 

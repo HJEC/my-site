@@ -72,7 +72,7 @@ p a {
     position: relative;
     bottom: 1px;
     background-color: #005aff;
-    opacity: 0.5;
+    opacity: 0.8;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; }
 
 .intro-wrapper {
@@ -91,7 +91,6 @@ p a {
   margin: 40px auto 15px auto; }
   #title-name span {
     font-size: 3rem;
-    font-family: "Century Gothic", sans-serif;
     font-weight: 600;
     cursor: crosshair;
     color: #f9f9f9;
@@ -110,7 +109,7 @@ p a {
   cursor: pointer;
   transition: transform 0.2s ease; }
   .slide-link:hover, .slide-link:focus, .slide-link:active {
-    transform: scale(1.1) translate(0px, 3px); }
+    color: #ffa500; }
     .slide-link:hover:after, .slide-link:focus:after, .slide-link:active:after {
       width: 100%; }
   .slide-link:after {
@@ -123,6 +122,8 @@ p a {
     background-color: #ffa500;
     opacity: 0.8;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; }
+  .slide-link:hover, .slide-link:focus, .slide-link:active {
+    transform: scale(1.1) translate(0px, 3px); }
 
 .resume {
   font-size: 0.9rem;
